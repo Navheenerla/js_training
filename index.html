@@ -7,25 +7,22 @@
     <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
 </head>
 <body>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
     <div id="container">
-
     </div>
     <tbody>
         <h3>How much was your bill?</h2>
         <label for="textInput">$:</label>
-        <input type="number" id="billAmount" class="custom" size="32" placeholder="Bill amount">
+        <input type="number" name="billAmount" id="billAmount" class="custom" size="32" placeholder="Bill amount" required>
         <h3>How was your service?</h2>
-            <select name="pets" name="lname" id="service" style="width: 20%;">
-                <option value="">--Please choose an option--</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="hamster">Hamster</option>
-                <option value="parrot">Parrot</option>
-                <option value="spider">Spider</option>
-                <option value="goldfish">Goldfish</option>
-            </select>
+            <select name="pets" name="lname" id="service" style="width: 20%;" required>
+                <option value="">--Select the service--</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Very good">Very good</option>
+                <option value="Good">Good</option>
+                <option value="Poor">Poor</option>            </select>
         <h3>How many people are sharing the bill?</h2>
-        <input type="number" id="people" class="custom" size="32" placeholder="Number of people"><br>
+        <input type="number" id="people" class="custom" size="32" placeholder="Number of people" required><br>
         <button class="favorite styled" type="button" onclick="addRow();">CALCULATE</button>
     </div>
     <table border="1" id="show">
@@ -37,7 +34,7 @@
        </tr>
     </tbody>
     </table>
-
+    </form>
     <script src="./main.js"></script>
 </body> 
 </html>

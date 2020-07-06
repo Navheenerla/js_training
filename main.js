@@ -1,3 +1,4 @@
+
 var list1 = [];
 var list2 = [];
 var list3 = [];
@@ -13,7 +14,6 @@ function addRow(){
     list1[x] = document.getElementById('billAmount').value;
     list2[x] = document.getElementById('service').value;
     list3[x] = document.getElementById('people').value;
-    console.log(billAmount);
 
     var cel1 = newRow.insertCell(0);
     var cel2 = newRow.insertCell(1);
